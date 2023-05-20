@@ -1,0 +1,139 @@
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:38:51 +0530
+  [1m[35mSQL (303.8ms)[0m  [1m[35mUSE [UTF][0m
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2218)
+
+
+  
+ActiveRecord::AdapterNotSpecified (The `development_sec` database is not configured for the `development` environment.
+
+  Available database configurations are:
+
+  development
+):
+  
+app/controllers/api/v1/cinemas_controller.rb:4:in `get_cinemas'
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:41:36 +0530
+  [1m[35mSQL (265.6ms)[0m  [1m[35mUSE [UTF][0m
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1826)
+
+
+  
+ActiveRecord::AdapterNotSpecified (The `development_sec` database is not configured for the `development` environment.
+
+  Available database configurations are:
+
+  development
+):
+  
+app/controllers/api/v1/cinemas_controller.rb:5:in `get_cinemas'
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:42:14 +0530
+  [1m[35mSQL (351.7ms)[0m  [1m[35mUSE [UTF][0m
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+  [1m[35mSQL (264.8ms)[0m  [1m[35mUSE [UTF][0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:6:in `get_cinemas'
+  [1m[35mSQL (572.4ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm as film LEFT JOIN SYN_tblFilm as tbl_film on tbl_session.Film_strCode = tbl_film.Film_strCode LEFT JOIN tblCinema as tblCinema on tbl_session.Cinema_strID = tblCinema.Cinema_strID where tblCinema.Cinema_strID = ''[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:6:in `get_cinemas'
+Completed 500 Internal Server Error in 5381ms (ActiveRecord: 1082.4ms | Allocations: 3461)
+
+
+  
+ActiveRecord::StatementInvalid (TinyTds::Error: The multi-part identifier "tbl_session.Film_strCode" could not be bound.):
+  
+app/controllers/api/v1/cinemas_controller.rb:6:in `get_cinemas'
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:43:59 +0530
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+  [1m[35mSQL (307.0ms)[0m  [1m[35mUSE [UTF][0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:6:in `get_cinemas'
+  [1m[35mSQL (584.5ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:6:in `get_cinemas'
+  [1m[35mSQL (250.1ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strNowShowingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (291.6ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strUpcomingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:8:in `get_cinemas'
+  [1m[35mSQL (248.8ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strFeatureFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:9:in `get_cinemas'
+Completed 200 OK in 9831ms (Views: 10.4ms | ActiveRecord: 1987.9ms | Allocations: 13133)
+
+
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:51:11 +0530
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+  [1m[35mSQL (306.7ms)[0m  [1m[35mUSE [UTF][0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (308.2ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (305.6ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strNowShowingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:8:in `get_cinemas'
+  [1m[35mSQL (240.0ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strUpcomingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:9:in `get_cinemas'
+  [1m[35mSQL (239.4ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strFeatureFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:10:in `get_cinemas'
+Completed 500 Internal Server Error in 6325ms (ActiveRecord: 1707.1ms | Allocations: 4122)
+
+
+  
+ActiveRecord::AdapterNotSpecified (The `development_sec` database is not configured for the `development` environment.
+
+  Available database configurations are:
+
+  development
+):
+  
+app/controllers/api/v1/cinemas_controller.rb:11:in `get_cinemas'
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:51:39 +0530
+  [1m[35mSQL (305.8ms)[0m  [1m[35mUSE [UTF][0m
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+  [1m[35mSQL (306.4ms)[0m  [1m[35mUSE [UTF][0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (307.2ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (305.0ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strNowShowingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:8:in `get_cinemas'
+  [1m[35mSQL (305.7ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strUpcomingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:9:in `get_cinemas'
+  [1m[35mSQL (305.6ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strFeatureFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:10:in `get_cinemas'
+Completed 500 Internal Server Error in 6447ms (ActiveRecord: 1837.5ms | Allocations: 14715)
+
+
+  
+LoadError (Error loading the 'mysql2' Active Record adapter. Missing a gem it depends on? mysql2 is not part of the bundle. Add it to your Gemfile.):
+  
+app/controllers/api/v1/cinemas_controller.rb:11:in `get_cinemas'
+Started GET "/api/v1/cinemas/get_cinemas" for 127.0.0.1 at 2023-05-19 22:53:01 +0530
+  [1m[35mSQL (243.3ms)[0m  [1m[35mUSE [UTF][0m
+Processing by Api::V1::CinemasController#get_cinemas as */*
+  Parameters: {"film_id"=>"TESTHO00010618"}
+  [1m[35mSQL (243.5ms)[0m  [1m[35mUSE [UTF][0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (308.3ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:7:in `get_cinemas'
+  [1m[35mSQL (306.4ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strNowShowingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:8:in `get_cinemas'
+  [1m[35mSQL (305.9ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strUpcomingFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:9:in `get_cinemas'
+  [1m[35mSQL (304.4ms)[0m  [1m[34mSELECT * FROM SYN_tblFilm where Film_strFeatureFlag='Y'[0m
+  ↳ app/controllers/api/v1/cinemas_controller.rb:10:in `get_cinemas'
+Completed 500 Internal Server Error in 6222ms (Allocations: 12478)
+
+
+  
+NameError (uninitialized constant Api::V1::CinemasController::SingleMoviePage
+
+			movie = SingleMoviePage.find_by_film_id(now["Film_strCode"])
+			        ^^^^^^^^^^^^^^^
+Did you mean?  Singleton):
+  
+app/controllers/api/v1/cinemas_controller.rb:17:in `block in get_cinemas'
+app/controllers/api/v1/cinemas_controller.rb:16:in `get_cinemas'
+Started GET "/admins/sign_in" for ::1 at 2023-05-20 19:03:47 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_in"):
+  
